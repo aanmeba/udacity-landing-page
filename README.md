@@ -1,13 +1,23 @@
 # Landing Page Project
 
-## Table of Contents
+## Description
 
-* [Instructions](#instructions)
+The aim of the project was to build a multi-section landing page, with a dynamically updating navigational menu based on the amount of content that is added to the page. Languages used
 
-## Instructions
+- HTML
+- CSS
+- JS
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+## Project Requirements
 
-To get started, open `js/app.js` and start building out the app's functionality
+- **Navigation** Navigation is built dynamically as an unordered list.
 
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+- **Section** Active State It should be clear which section is being viewed while scrolling through the page.
+
+- **Scroll** to Anchor When clicking an item from the navigation menu, the link should scroll to the appropriate section.
+
+- **Usability** All features are usable across modern desktop, tablet, and phone browsers.
+
+## Demo
+
+You can check the live project <a href="https://aanmeba.github.io/udacity-landing-page/" target="_blank">here</a>.
