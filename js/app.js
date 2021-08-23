@@ -17,7 +17,8 @@
  * Define Global Variables
  * 
 */
-
+const navList = document.querySelector('#navbar__list');
+const sections = document.querySelectorAll('section[id^="section"]');
 
 /**
  * End Global Variables
@@ -34,12 +35,25 @@
 */
 
 // build the nav
-
+const buildNavMenu = () => {
+    for (let i = 1; i <=sections.length; i++) {
+        let liItem = document.createElement('li');
+        liItem.innerHTML = `<a href="#section${i}" class="menu__link">Section ${i}</a>`;
+        navList.appendChild(liItem);
+    }
+}
 
 // Add class 'active' to section when near top of viewport
-
-
-// Scroll to anchor ID using scrollTO event
+const activeScrolling = () => {
+    sections.forEach(section => {
+        section.getBoundingClientRect();
+        if (section.getBoundingClientRect().top >= -170 && section.getBoundingClientRect().top <= 390) {
+            section.classList.add('your-active-class');
+        } else {
+            section.classList.remove('your-active-class');
+        }
+    })
+}
 
 
 /**
@@ -49,9 +63,10 @@
 */
 
 // Build menu 
+buildNavMenu();
 
 // Scroll to section on link click
 
 // Set sections as active
-
+document.addEventListener('scroll', activeScrolling);
 
